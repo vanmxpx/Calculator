@@ -15,19 +15,13 @@ namespace Calculator
         public MainForm()
         {
             InitializeComponent();
-
         }
 
-        /*public event EventHandler Button0Click;
-        public event EventHandler Button1Click;
-        public event EventHandler Button2Click;
-        public event EventHandler Button3Click;
-        public event EventHandler Button4Click;
-        public event EventHandler Button5Click;
-        public event EventHandler Button6Click;
-        public event EventHandler Button7Click;
-        public event EventHandler Button8Click;
-        public event EventHandler Button9Click;
+        int action;
+        bool dot = false;
+        double first = 0, resolution = 0;
+
+        /*
         public event EventHandler ButtonPlusMinusClick;
         public event EventHandler ButtonDotClick;
         public event EventHandler ButtonMultClick;
@@ -38,9 +32,7 @@ namespace Calculator
         public event EventHandler ButtonBSClick;
         public event EventHandler ButtonDelClick;*/
 
-
-
-
+        #region Number buttons
         private void button1_Click(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -48,17 +40,40 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "1";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "1";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "1";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "1";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "1";
+                    break;
                 default:
                     ResolutionTextBox.Text += "1";
                     break;
             }
         }
-
         private void button2_Click_1(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
             {
                 case "0":
+                    ResolutionTextBox.Text = "2";
+                    break;
+                case "+":
+                    ResolutionTextBox.Text = "2";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "2";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "2";
+                    break;
+                case "/":
                     ResolutionTextBox.Text = "2";
                     break;
                 default:
@@ -73,12 +88,23 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "3";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "3";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "3";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "3";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "3";
+                    break;
                 default:
                     ResolutionTextBox.Text += "3";
                     break;
             }
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -86,12 +112,23 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "4";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "4";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "4";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "4";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "4";
+                    break;
                 default:
                     ResolutionTextBox.Text += "4";
                     break;
             }
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -99,12 +136,23 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "5";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "5";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "5";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "5";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "5";
+                    break;
                 default:
                     ResolutionTextBox.Text += "5";
                     break;
             }
         }
-
         private void button6_Click_1(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -112,12 +160,23 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "6";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "6";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "6";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "6";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "6";
+                    break;
                 default:
                     ResolutionTextBox.Text += "6";
                     break;
             }
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -125,12 +184,23 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "7";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "7";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "7";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "7";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "7";
+                    break;
                 default:
                     ResolutionTextBox.Text += "7";
                     break;
             }
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -138,12 +208,23 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "8";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "8";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "8";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "8";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "8";
+                    break;
                 default:
                     ResolutionTextBox.Text += "8";
                     break;
             }
         }
-
         private void button9_Click(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -151,12 +232,23 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "9";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "9";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "9";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "9";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "9";
+                    break;
                 default:
                     ResolutionTextBox.Text += "9";
                     break;
             }
         }
-
         private void button0_Click(object sender, EventArgs e)
         {
             switch (ResolutionTextBox.Text)
@@ -164,10 +256,101 @@ namespace Calculator
                 case "0":
                     ResolutionTextBox.Text = "0";
                     break;
+                case "+":
+                    ResolutionTextBox.Text = "0";
+                    break;
+                case "-":
+                    ResolutionTextBox.Text = "0";
+                    break;
+                case "*":
+                    ResolutionTextBox.Text = "0";
+                    break;
+                case "/":
+                    ResolutionTextBox.Text = "0";
+                    break;
                 default:
                     ResolutionTextBox.Text += "0";
                     break;
             }
+        }
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            if (!dot)
+            {
+                ResolutionTextBox.Text += ",";
+                dot = true;
+            }
+        }
+        #endregion
+
+        private void buttonResolution_Click(object sender, EventArgs e)
+        {
+            switch (action)
+            {
+                case 1:
+                    resolution += Convert.ToDouble(ResolutionTextBox.Text);
+                    break;
+                case 2:
+                    resolution -= Convert.ToDouble(ResolutionTextBox.Text);
+                    break;
+                case 3:
+                    resolution *= Convert.ToDouble(ResolutionTextBox.Text);
+                    break;
+                case 4:
+                    resolution /= Convert.ToDouble(ResolutionTextBox.Text);
+                    break;
+            }
+            HistoryTextBox.Text += ResolutionTextBox.Text + "=" + resolution + ";";
+            ResolutionTextBox.Text = Convert.ToString(resolution);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            HistoryTextBox.Clear();
+            ResolutionTextBox.Text = "0";
+            resolution = 0;
+            first = 0;
+            dot = false;
+        }
+
+        private void buttonMinus_Click(object sender, EventArgs e)
+        {
+            first = Convert.ToDouble(ResolutionTextBox.Text);
+            resolution -= first;
+            HistoryTextBox.Text += first + "-";
+            ResolutionTextBox.Text = "-";
+            action = 2;
+            dot = false;
+        }
+
+        private void buttonMyltiply_Click(object sender, EventArgs e)
+        {
+            first = Convert.ToDouble(ResolutionTextBox.Text);
+            resolution *= first;
+            HistoryTextBox.Text += first + "*";
+            ResolutionTextBox.Text = "*";
+            action = 3;
+            dot = false;
+        }
+
+        private void buttonDivide_Click(object sender, EventArgs e)
+        {
+            first = Convert.ToDouble(ResolutionTextBox.Text);
+            resolution /= first;
+            HistoryTextBox.Text += first + "/";
+            ResolutionTextBox.Text = "/";
+            action = 4;
+            dot = false;
+        }
+
+        private void buttonPlus_Click(object sender, EventArgs e)
+        {
+            first = Convert.ToDouble(ResolutionTextBox.Text);
+            resolution += first;
+            HistoryTextBox.Text += first + "+";
+            ResolutionTextBox.Text = "+";
+            action = 1;
+            dot = false;
         }
 
     }
