@@ -17,9 +17,9 @@ namespace Calculator
             InitializeComponent();
         }
 
-        int action;
+        int action = 0;
         bool dot = false;
-        double first = 0, resolution = 0;
+        double resolution = 0;
 
         /*
         public event EventHandler ButtonPlusMinusClick;
@@ -309,15 +309,15 @@ namespace Calculator
             HistoryTextBox.Clear();
             ResolutionTextBox.Text = "0";
             resolution = 0;
-            first = 0;
+            action = 0;
             dot = false;
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
-            first = Convert.ToDouble(ResolutionTextBox.Text);
-            resolution -= first;
-            HistoryTextBox.Text += first + "-";
+            if ( action == 0 ) resolution = Convert.ToDouble(ResolutionTextBox.Text);
+            else resolution -= Convert.ToDouble(ResolutionTextBox.Text); 
+            HistoryTextBox.Text += Convert.ToDouble(ResolutionTextBox.Text) + "-";
             ResolutionTextBox.Text = "-";
             action = 2;
             dot = false;
@@ -325,9 +325,9 @@ namespace Calculator
 
         private void buttonMyltiply_Click(object sender, EventArgs e)
         {
-            first = Convert.ToDouble(ResolutionTextBox.Text);
-            resolution *= first;
-            HistoryTextBox.Text += first + "*";
+            if (action == 0) resolution = Convert.ToDouble(ResolutionTextBox.Text);
+            else resolution *= Convert.ToDouble(ResolutionTextBox.Text);
+            HistoryTextBox.Text += Convert.ToDouble(ResolutionTextBox.Text) + "*";
             ResolutionTextBox.Text = "*";
             action = 3;
             dot = false;
@@ -335,9 +335,9 @@ namespace Calculator
 
         private void buttonDivide_Click(object sender, EventArgs e)
         {
-            first = Convert.ToDouble(ResolutionTextBox.Text);
-            resolution /= first;
-            HistoryTextBox.Text += first + "/";
+            if (action == 0) resolution = Convert.ToDouble(ResolutionTextBox.Text);
+            else resolution /= Convert.ToDouble(ResolutionTextBox.Text);
+            HistoryTextBox.Text += Convert.ToDouble(ResolutionTextBox.Text) + "/";
             ResolutionTextBox.Text = "/";
             action = 4;
             dot = false;
@@ -345,9 +345,8 @@ namespace Calculator
 
         private void buttonPlus_Click(object sender, EventArgs e)
         {
-            first = Convert.ToDouble(ResolutionTextBox.Text);
-            resolution += first;
-            HistoryTextBox.Text += first + "+";
+            resolution += Convert.ToDouble(ResolutionTextBox.Text);
+            HistoryTextBox.Text += Convert.ToDouble(ResolutionTextBox.Text) + "+";
             ResolutionTextBox.Text = "+";
             action = 1;
             dot = false;

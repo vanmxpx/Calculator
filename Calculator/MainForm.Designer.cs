@@ -276,6 +276,7 @@
             this.ResolutionTextBox.Enabled = false;
             this.ResolutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.ResolutionTextBox.Location = new System.Drawing.Point(12, 12);
+            this.ResolutionTextBox.MaxLength = 10;
             this.ResolutionTextBox.Name = "ResolutionTextBox";
             this.ResolutionTextBox.ReadOnly = true;
             this.ResolutionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
