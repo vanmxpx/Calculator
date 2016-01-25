@@ -21,17 +21,6 @@ namespace Calculator
         bool dot = false;
         double resolution = 0;
 
-        /*
-        public event EventHandler ButtonPlusMinusClick;
-        public event EventHandler ButtonDotClick;
-        public event EventHandler ButtonMultClick;
-        public event EventHandler ButtonDivClick;
-        public event EventHandler ButtonPlusClick;
-        public event EventHandler ButtonMinusClick;
-        public event EventHandler ButtonResolClick;
-        public event EventHandler ButtonBSClick;
-        public event EventHandler ButtonDelClick;*/
-
         #region Number buttons
         private void button1_Click(object sender, EventArgs e)
         {
@@ -335,6 +324,17 @@ namespace Calculator
             dot = false;
         }
 
+        private void buttonPlusMinus_Click(object sender, EventArgs e)
+        {
+                ResolutionTextBox.Text = Convert.ToString(-Convert.ToDouble(ResolutionTextBox.Text));
+        }
+
+        private void buttonBackSpace_Click(object sender, EventArgs e)
+        {
+            if (ResolutionTextBox.Text.Length == 1) ResolutionTextBox.Text = "0";
+            else  ResolutionTextBox.Text = ResolutionTextBox.Text.Remove(ResolutionTextBox.Text.Length - 1);
+        }
+
 
         private void CheckActions()
             {
@@ -358,5 +358,6 @@ namespace Calculator
             }
 }
 
+        
     }
 }

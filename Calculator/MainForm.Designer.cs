@@ -73,6 +73,7 @@
             this.buttonPlusMinus.TabIndex = 1;
             this.buttonPlusMinus.Text = "+/-";
             this.buttonPlusMinus.UseVisualStyleBackColor = true;
+            this.buttonPlusMinus.Click += new System.EventHandler(this.buttonPlusMinus_Click);
             // 
             // button0
             // 
@@ -270,6 +271,7 @@
             this.buttonBackSpace.TabIndex = 21;
             this.buttonBackSpace.Text = "<=";
             this.buttonBackSpace.UseVisualStyleBackColor = true;
+            this.buttonBackSpace.Click += new System.EventHandler(this.buttonBackSpace_Click);
             // 
             // ResolutionTextBox
             // 
