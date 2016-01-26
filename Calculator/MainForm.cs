@@ -272,6 +272,7 @@ namespace Calculator
         }
         #endregion
 
+        #region Action buttons
         private void buttonResolution_Click(object sender, EventArgs e)
         {
             CheckActions();
@@ -286,6 +287,17 @@ namespace Calculator
             resolution = 0;
             action = 0;
             dot = false;
+        }
+
+        private void buttonPlusMinus_Click(object sender, EventArgs e)
+        {
+                ResolutionTextBox.Text = Convert.ToString(-Convert.ToDouble(ResolutionTextBox.Text));
+        }
+
+        private void buttonBackSpace_Click(object sender, EventArgs e)
+        {
+            if (ResolutionTextBox.Text.Length == 1) ResolutionTextBox.Text = "0";
+            else  ResolutionTextBox.Text = ResolutionTextBox.Text.Remove(ResolutionTextBox.Text.Length - 1);
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
@@ -323,17 +335,7 @@ namespace Calculator
             action = 1;
             dot = false;
         }
-
-        private void buttonPlusMinus_Click(object sender, EventArgs e)
-        {
-                ResolutionTextBox.Text = Convert.ToString(-Convert.ToDouble(ResolutionTextBox.Text));
-        }
-
-        private void buttonBackSpace_Click(object sender, EventArgs e)
-        {
-            if (ResolutionTextBox.Text.Length == 1) ResolutionTextBox.Text = "0";
-            else  ResolutionTextBox.Text = ResolutionTextBox.Text.Remove(ResolutionTextBox.Text.Length - 1);
-        }
+        #endregion
 
 
         private void CheckActions()

@@ -56,11 +56,10 @@
             this.HistoryTextBox.Enabled = false;
             this.HistoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.HistoryTextBox.Location = new System.Drawing.Point(13, 81);
-            this.HistoryTextBox.MaxLength = 100;
-            this.HistoryTextBox.Multiline = true;
+            this.HistoryTextBox.MaxLength = 99999;
             this.HistoryTextBox.Name = "HistoryTextBox";
             this.HistoryTextBox.ReadOnly = true;
-            this.HistoryTextBox.Size = new System.Drawing.Size(309, 36);
+            this.HistoryTextBox.Size = new System.Drawing.Size(309, 30);
             this.HistoryTextBox.TabIndex = 0;
             this.HistoryTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -279,6 +278,7 @@
             this.ResolutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.ResolutionTextBox.Location = new System.Drawing.Point(12, 12);
             this.ResolutionTextBox.MaxLength = 10;
+            this.ResolutionTextBox.Multiline = false;
             this.ResolutionTextBox.Name = "ResolutionTextBox";
             this.ResolutionTextBox.ReadOnly = true;
             this.ResolutionTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
